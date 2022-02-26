@@ -13,31 +13,31 @@ import java.util.ArrayList;
 class Inspector {
 	
 	/**
-     *  Point class 
-     *  - it will help us to hold 2D point (x,y)
-     * 
-     */
+	 *  Point class 
+	 *  - it will help us to hold 2D point (x,y)
+	 * 
+	 */
 	private class Point {
 		
 		private int x; // holds x value of the Point
-        private int y; // holds y value of the Point
+        	private int y; // holds y value of the Point
 		
-        /**
-         *  Parameterized Constructor
-         * @param x : int
-         * @param y : int
-         */
+		/**
+		 *  Parameterized Constructor
+		 * @param x : int
+		 * @param y : int
+		 */
 		Point(int x, int y) {
 			this.x = x;
 			this.y = y;
 		}
 		
-        // getter for x
+		// getter for x
 		public int getX() {
 			return x;
 		}
 		
-        // getter for y
+        	// getter for y
 		public int getY() {
 			return y;
 		}
@@ -75,7 +75,7 @@ class Inspector {
 	private boolean gogoEscaped; // to track if Crime Master GOGO escaped or not
 	
 	
-	/**
+    /**
      * Parameterized Constructor
      * 
      * @param width : int
@@ -85,7 +85,7 @@ class Inspector {
      */
 	Inspector (int width, int height, int time, int caseNumber) {
 
-        // initialising values
+        	// initialising values
 
 		this.width = width;
 		
@@ -97,9 +97,9 @@ class Inspector {
 
 
 
-        // initialising position 
+		// initialising position 
 
-        position = new ArrayList<>();
+		position = new ArrayList<>();
 		
 		for(int i = 0; i <= time ; ++i) {
 			
@@ -108,7 +108,7 @@ class Inspector {
 		}		
 		
 		
-        // initialising visited
+        	// initialising visited
 
 		visited = new int[width+1][height+1][time+1];
 				
@@ -142,7 +142,7 @@ class Inspector {
 			int t = scanner.nextInt(); // time-stamp for the searching event
 			
 
-            // input left top point of the searching area
+           	 // input left top point of the searching area
 
 			int left = scanner.nextInt();
 			
@@ -150,7 +150,7 @@ class Inspector {
 			
 
 
-            // input right bottom point of the searching area
+		    // input right bottom point of the searching area
 
 			int right = scanner.nextInt();
 			
@@ -158,8 +158,8 @@ class Inspector {
 			
 
             
-            // marking all points in the rectangle = 0 for that time-stamp
-            // as police has searched those points but didn't found Crime Master GOGO
+		    // marking all points in the rectangle = 0 for that time-stamp
+		    // as police has searched those points but didn't found Crime Master GOGO
 
 			for(int w = left; w <= right; ++w) {
 				
@@ -182,14 +182,14 @@ class Inspector {
      */
     public void searchGOGO () {
 		
-        /**
-         *  if any point in the city has not visited yet
+        	/**
+         	 *  if any point in the city has not visited yet
 		 *  then we will do depth first search on that point
 		 *  and try to find if Crime Master GOGO can leave the city
 		 * 	from that point or not in given time limit 
 		 *  before all the out going roads gets blocked
 		 *  
-         */
+        	 */
 
 		for(int w = 1; w <= width; ++w) {
 			
