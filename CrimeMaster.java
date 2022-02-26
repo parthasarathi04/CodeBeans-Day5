@@ -334,7 +334,7 @@ public class CrimeMaster {
 		
 		int width, height, time;
 		
-		int caseNumber = 0;
+		int caseNumber = 0; // to track current robbery case number
 		
 		
 		while(true) {
@@ -343,7 +343,7 @@ public class CrimeMaster {
 			
 			height = scanner.nextInt();
 			
-            time = scanner.nextInt();
+           		 time = scanner.nextInt();
 			
 
 			// as per input if width = height = time = 0
